@@ -1,0 +1,13 @@
+# Always use vyper in a venv (suggested by most of the community). This is to ensure that the installed packages are isolated from the main python installation
+# instructions for creating a venv having python version 3.13 
+# !python3.13 -m venv .venv # create a virtual environment
+# !source .venv/bin/activate # activate the virtual environment
+# !deacitivate # deactivate the virtual environment
+# !pip install vyper # install vyper
+# !vyper vyper_tutorial.py # compile the smart contract
+
+# Setting up ganache cli test environment for testing the smart contract (It is different from the GUI for web3.py library)
+# !sudo npm install -g ganache 
+
+# You can hence build a simple smart contract using vyper -  "Hello world" smart contract
+
