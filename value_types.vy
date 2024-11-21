@@ -16,19 +16,19 @@ def __init__(state: bool, int_var: int128, int_var2: int256, string_var: String[
     self.int_var= int_var
     self.int_var2= int_var2
     self.string_var= string_var
-    # self.address_var= ABCDabcdABcDabcDaBCDAbcdABcdAbCdABcDABCd
-    # self.bytes_var= ABCDabcdABcDabcDaBCDAbcdABcdAbCdABcDABCd
+    self.address_var= 0x0000000000000000000000000000000000000000
+    self.bytes_var= b""
     # self.bytes32_var= b"\x01"
     return
 
 @internal
 def pass_variables(state: bool, int_var: int128, int_var2: int256, string_var: String[100]) -> String[1000]:
     if state:
-        return (concat("The boolean state is " + state, " and the integer values are " + int_var, " and ", int_var2, " the string is ", string_var)) 
+        return (concat(b'The boolean state is {state}', " and the integer values are " + int_var, " and ", int_var2, " the string is ", string_var)) 
     else: 
         return (concat("The boolean state is ", state, " so no values are returned"))
+        
 
-pass_variables(True, 10, 8596, "Hello World")
 
  
 
