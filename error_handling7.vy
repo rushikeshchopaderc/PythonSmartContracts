@@ -1,7 +1,7 @@
 # @version ^0.4.0
-
 x: public(uint256)
 owner: public(address)
+name: public(String[10])
 
 @deploy
 def __init__():
@@ -23,6 +23,20 @@ def ErrorWithRaise(y: uint256):
     self.x=y
 
 ###################### Bubble up error ###############################
+# When 1 function calls anothe function which throws error, then the caller function shows error.
+
+@nonpayable
+@internal
+def internalErrorWithRaise(name: String[10]):
+    if self.owner!=msg.sender:
+        raise 'Not the sender of the contract'
+    self.name=name
+
+@nonpayable
+@external
+def BubbleUpFunction():
+    self.internalErrorWithRaise("John Doe")
+    
 
 
 
