@@ -37,7 +37,7 @@ def nameShadow(num: int128):
 
 
 # User defined - can be accessed only by the contract owner
-const_var: constant(128)= 194
+const_var: constant(int128)= 194
 
 ########## Environment variables
 # self.balance - stores the Balance of Ether that is stored inthe contract
