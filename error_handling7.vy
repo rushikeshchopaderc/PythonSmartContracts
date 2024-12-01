@@ -24,7 +24,7 @@ def ErrorWithRaise(y: uint256):
 
 ###################### Bubble up error ###############################
 # When 1 function calls anothe function which throws error, then the caller function shows error.
-
+# Whlie running in remix, this code will show error when the function is called from another address other than the one from which the contrat is compiled.
 @nonpayable
 @internal
 def internalErrorWithRaise(name: String[10]):
@@ -38,7 +38,12 @@ def BubbleUpFunction():
     self.internalErrorWithRaise("John Doe")
     
 
-
+##################### Using UNREACHABLE ##############################
+# This uses all the gas available in the transaction and then throws an error.
+@nonpayable
+@external
+def unreachableFunction():
+    raise UNREACHABLE
 
     
 
