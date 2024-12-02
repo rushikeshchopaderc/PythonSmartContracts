@@ -13,6 +13,8 @@ this __default__() function works similar to fallback function in solidity and t
 
 """
 
+balance_overall:public(uint256)
+
 # making an event for logging 
 
 event TransferFunds:
@@ -23,6 +25,7 @@ event TransferFunds:
 
 @payable
 @external
-def __default__():
+def __default__()->uint256:
     log TransferFunds(msg.sender, msg.value, self.balance, msg.gas)
-
+    self.balance_overall +=msg.value
+    return self.balance_overall
