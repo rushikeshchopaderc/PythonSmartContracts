@@ -1,5 +1,5 @@
 # @version ^0.2
-from vyper.interfaces import ERC20
+from vyper.builtins.interfaces import IERC20
 
 interface UniswapV2Router:
   def swapExactTokensForTokens(
@@ -15,8 +15,8 @@ WETH: constant(address) = 0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2
 
 @external
 def swap(tokenIn: address, tokenOut: address, amountIn: uint256):
-  ERC20(tokenIn).transferFrom(msg.sender, self, amountIn)
-  ERC20(tokenIn).approve(UNISWAP, amountIn)
+  extcall IERC20(tokenIn).transferFrom(msg.sender, self, amountIn)
+  extcall IERC20(tokenIn).approve(UNISWAP, amountIn)
 
   # pseudo code
   # path: address[]

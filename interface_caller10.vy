@@ -76,10 +76,13 @@ def Test(num: uint256):
 
 
 ##################### Way 3: Importing an interface from the vyper github repo ####################
+## For inbuilt contracts
+# from vyper.builtins.interfaces import IERC20
+# extcall IERC20(tokenIn).transferFrom(msg.sender, self, amountIn)
 
-# from ethereum.ercs import IERC20
-
-# implements: IERC20
-
+# Similarly for user defined contracts
+# import interface_receiver10 
+# def importBalance(user_address: address):
+#     return staticcall interface_receiver10(user_address).getBalance()
 
 
