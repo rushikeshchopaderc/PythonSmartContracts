@@ -1,5 +1,7 @@
 # @version ^0.4.0
 
+# In solidity, they use require keyword for checking conditions
+
 # A) if-else
 num: public(int128)
 list1: public(uint256[10])
@@ -56,6 +58,5 @@ def breakContinue()-> uint256:
             x+=i
     return x
 
-# D) require keyword
 
 
