@@ -1,12 +1,14 @@
 # PythonSmartContracts
 
-Smart Contracts Development with Solidity using HardHat is pupular amongst the web3 community. But the largest DeFI protocols like Curve are using python equivalent of it! 
+Smart Contracts Development with Solidity using HardHat is popular amongst the web3 community. But the largest DeFI protocols like Curve are using the Python equivalent of it! 
 
-This consists of python libraries like web3.py, Brownie, Apeworx, etc. The python equavalent of solidity, Vyper is a great programming language to focus on Smart contracts development using Python. 
+The smart contracts built using Vyper are more secure than solidity.
 
-Python is preferable over javascript as most of the defi applications have a mass adoption of python. Writing python is easier, and debugging is comparatively easier. Further developing data science applications on blockchain, using python is a great asset. 
+This consists of Python libraries like web3.py, Brownie, Apeworx, etc. The Python equivalent of solidity, Vyper is a great programming language that focuses on smart contracts development using Python. 
 
-This project is a full guide to develop smart contracts using python. Happy learning!
+Python is preferable over JavaScript as most defi applications have mass adoption of Python. Writing Python is easier, and debugging is comparatively easier. Further developing data science applications on blockchain, using Python is a great asset. 
+
+This project is a full guide to developing smart contracts using Python. Happy learning!
 
 Rushikesh Chopade, 
 Founder @Zenitheum, 
