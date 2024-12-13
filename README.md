@@ -1,4 +1,4 @@
-# PythonSmartContracts
+# VyperSmartContracts
 
 Smart Contracts Development with Solidity using HardHat is popular amongst the web3 community. But the largest DeFI protocols like Curve are using the Python equivalent of it! 
 
